@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>ionCube Package Foundry</TITLE>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY>
+<table align="center" width="600" height="100%">
+<tr valign="top"><td>
+
+<div align="right">
+<img src="images/Logo1.png" border="0"><br>
+<a href="ipf_gui.html">Previous</a> |
+
+<a href="gui_install_files.html">Next</a> | 
+<a href="ipf_gui.html">Up</a> | 
+<a href="index.html">Table of Contents</a>
+</div>
+
+	<h4>5.1. Basic Settings</h4>
+<p>
+Basic IPF settings are entered on the <b>Basic</b> tab:</p>
+
+<div align="center">
+<img src="images/ipf_screen1.png">
+</div>
+<br>
+
+<p>
+The <b>product name</b> and <b>product version</b> can be specified and appear on the user interface of the installation wizard in several places.
+</p>
+
+<p>
+Choose the <b>package is an archive</b> option if you have a zip file or tar.gz file which should be used as the package when creating the installer. Usually it is preferable to use a tar.gz since some servers are able to upload these files in compressed form, then extract on the server, which might reduce transfer time. IPF requires the archive to be a single compressed folder (with subfolders and files), although the name of the top level folder will be replaced with the package folder name (see below).
+</p>
+
+<p>
+Choose the <b>package is an folder</b> option if you have a folder which IPF should compress and use as the package. This option is more flexible than if a package is provided as an archive, since custom permissions can be set using the <b>Permissions</b> tab. On the other hand if the package is provided as an archive, the IPF build process will be faster. The name of the specified folder will be ignored, and replaced with the package folder name (see below).
+</p>
+
+<h4>Package Folder Name</h4>
+
+<p>
+Some applications require their top-level folder to have a specific name, other applications can have a user-defined  top-level folder name, and some applications are designed to be located in the 'web root' of a domain. To achieve the first type of package, enter a name in the <b>Default package folder name</b> field, but leave the 
+<b>Allow end-user to edit the package folder name</b> unchecked. Check this box on the other hand if the user should be allowed to modify the name of the top-level folder. Lastly, for applications that should be installed to the web-root, leave the default package folder name blank.
+</p>
+
+<p>
+If a product will only be installed to remote servers, and never to an end-user's local machine, then the <b>Allow installations to the end-user's local machine</b> checkbox can be unchecked. This will remove the 'Installation Type' wizard step. This option would be useful, for example, if the creator of the package was intending to use the package to install to a handful of their own remote servers. If a product is for general release then usually this option should not be used.
+</p>
+
+<p>
+In order to automatically enabled Loaders for ionCube Encoded files, check the <b>Enable automatic Loader installation</b> box. Checks will be performed on the end-user's server to verify whether the server is able to execute encoded files. If Loaders are not currently installed then the installer will attempt to transfer appropriate Loaders to the target server automatically. If this option is selected, the end-user will be prompted to enter the URL of the package on their web server.</p>
+
+<p>
+Specify whether any encoded files are encoded in the newer ASCII format, or all are encoded in binary format. In the case of ASCII files, and where Loaders are installed on the target server but are not recent enough, updated Loaders will be installed.
+</p>
+
+<p>
+The <b>output file</b> must be an filename ending in .exe, in an existing directory.
+</p></td></tr>
+<tr valign="bottom" height="10"><td style="padding:0px">
+<div align="center" class="copyright">
+Copyright 2002-2005 <a class="copyright" href="http://www.ioncube.com">ionCube Ltd.</a>  All rights reserved. 
+</div>
+</td></tr></table>
+</BODY>
+</HTML>

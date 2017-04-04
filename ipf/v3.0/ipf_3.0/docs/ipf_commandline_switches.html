@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>ionCube Package Foundry</TITLE>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY>
+<table align="center" width="600" height="100%">
+<tr valign="top"><td>
+
+<div align="right">
+<img src="images/Logo1.png" border="0"><br>
+<a href="ipf_commandline_tool.html">Previous</a> |
+
+<a href="ipf_gui.html">Next</a> | 
+<a href="ipf_commandline_tool.html">Up</a> | 
+<a href="index.html">Table of Contents</a>
+</div>
+
+	<h4>4.1. Command-line Options</h4>
+<table class="cli" align="center">
+<tr><td width="230"><tt>-V</tt></td><td>
+	Displays IPF version information.
+	</td></tr>
+<tr><td width="230"><tt>-v</tt></td><td>
+	Output verbose messages.
+	</td></tr>
+<tr><td width="230"><tt>-?</tt></td><td>
+	Display command-line help.
+	</td></tr>
+<tr><td width="230"><tt>--config[=path]</tt></td><td>
+	Specify an IPF .pfs script file.
+	</td></tr>
+<tr><td width="230"><tt>--license-request</tt></td><td>
+	Specify the path to an IPF license file (usually licdata.txt).
+	</td></tr>
+<tr><td width="230"><tt>-o</tt></td><td>
+	This item sets the path of the Package Foundry's output file.
+	</td></tr>
+<tr><td width="230"><tt>--package-name[=name]</tt></td><td>
+	This item sets the name of the package, as used throughout the package installer.
+	</td></tr>
+<tr><td width="230"><tt>--package-dir[=path]</tt></td><td>
+	Either a folder or a file (see below) must be specified containing the files comprising the application to be installed.
+	</td></tr>
+<tr><td width="230"><tt>--package-file[=path]</tt></td><td>
+	If the application has already been compressed with a supported compression method as described below, the path of the archive may be specified.
+	</td></tr>
+<tr><td width="230"><tt>--eval-key[=name]</tt></td><td>
+	If you are using an evaluation copy of the IPF command-line tool, you must specify your evaluation key using this option.
+	</td></tr>
+<tr><td width="230"><tt>--package-version[=name]</tt></td><td>
+	The product version may be specified with this item. The default value is '1.0'.
+	</td></tr>
+<tr><td width="230"><tt>--upload-as-archive</tt></td><td>
+	If a server has suitable features, the package may be uploaded as a <tt>tar.gz</tt> archive and 
+unpacked on the server. Although less data is transferred, more FTP commands may be necessary. With the latency inherent in FTP, this may increase the overall upload time. Which method is perferable depends on the structure of the package. As a guide this option should be set to 1 if the package consists of a small number of large files that compress well, but testing both options is a good idea. The default value for this option is 0.
+	</td></tr>
+<tr><td width="230"><tt>--license-file[=path]</tt></td><td>
+	If this item is used the specified file will be displayed during the installation process
+	</td></tr>
+<tr><td width="230"><tt>--readme-file[=path]</tt></td><td>
+	If this item is used the use will have the option of displaying the readme file at the end of the installation process.
+	</td></tr>
+<tr><td width="230"><tt>--intro-file[=path]</tt></td><td>
+	An introduction can be shown after the license agreement (or start page, if the license in not present). This introduction may contain installation instructions or other information. Either the path of a file can specified, or a URL.
+	</td></tr>
+<tr><td width="230"><tt>--intro-file-external</tt></td><td>
+	If this option is set, the intro file will be launched externally using the Windows file association. For example, an html file
+will be launched in the default web browser. If this option is not set then the intro file will be displayed in the installer itself.
+	</td></tr>
+<tr><td width="230"><tt>--default-file-mode[=mode]</tt></td><td>
+	When compressing a package archive with gzip compression this setting specifies the default permission mode to use for those files not specified with <tt>chmod-package</tt>. This option only applies to the Windows version of IPF, as on Linux permissions can be easily set for the package folder using the shell. The default value is 644.
+	</td></tr>
+<tr><td width="230"><tt>--default-folder-mode[=mode]</tt></td><td>
+	When compressing a package archive with gzip compression this setting specifies the default permission mode to use for those folders not specified with <tt>chmod-package</tt>. This option only applies to the Windows version of IPF, as on Linux permissions can be easily set for the package folder using the shell. The default value is 755.
+	</td></tr>
+<tr><td width="230"><tt>--disable-permissions-warning</tt></td><td>
+	The setting of permissions will only work if the <tt>chmod</tt> command is supported on the target FTP server. If  <tt>disable-permission-warning</tt> is not set, then  a warning will be displayed if permissions cannot be set. The files and permissions specified with <tt>chmod-package</tt> will be listed. The warning is only displayed if at least one item is specified with <tt>chmod-package</tt>.
+	</td></tr>
+<tr><td width="230"><tt>--disable-local-installs</tt></td><td>
+	If a product will only be installed to remote servers, and never to an end-user's local machine, then this option
+	can be used to remove the 'Installation Type' wizard step. This option would be useful, for example, if the creator of the package was intending to use the package to install to a handful of their own remote servers. If a product is for general release then usually this option should not be used.
+	</td></tr>
+<tr><td width="230"><tt>--allow-pfn-edit</tt></td><td>
+	When this option is set to 1 the end-user will be able to edit the package folder name.
+	</td></tr>
+<tr><td width="230"><tt>--hide-product-info</tt></td><td>
+	When this option is set to 1 the product name and version will not be displayed over the side panel image.
+	</td></tr>
+<tr><td width="230"><tt>--main-page[=path]</tt></td><td>
+	This item can be set to the main page of the package. The Configuration Tool will then launch this page
+in the user's default browser when they click <b>Launch</b>.
+	</td></tr>
+<tr><td width="230"><tt>--image-side-panel[=path]</tt></td><td>
+	This item enables customisation of the side panel image on the first page and last pages of the package installer. The image must have file extension .png, .jpeg, .jpg, .bmp, or .gif, and be a valid image of the corresponding image format.
+	</td></tr>
+<tr><td width="230"><tt>--image-motif[=path]</tt></td><td>
+	This item enables customizations of the image appearing on the top right of most pages in the package installer wizard. As with the side panel image, this image must be in Portable Network Graphics format.
+	</td></tr>
+<tr><td width="230"><tt>--disable-auto-loader-install</tt></td><td>
+	By default, Loaders will be installed automatically if they are not already installed on the target server. Use this option to control 
+	whether to enable the automatic installation of Loaders.
+	</td></tr>
+<tr><td width="230"><tt>--all-encoded-file-binary</tt></td><td>
+	Use this option to specify whether all files in the application which are encoded with the ionCube Encoder have been encoded in binary mode.
+	</td></tr>
+<tr><td width="230"><tt>--install-script-url[=path]</tt></td><td>
+	Set this item to the URL of a page that should be launched in the user's default web browser after installation is complete. The URL is relative to the folder the user uploads the application into.
+	</td></tr>
+<tr><td width="230"><tt>--install-script-interactive</tt></td><td>
+	This item specifies whether the post-install script requires user-interaction. If so, then the page will be launched in a browser, otherwise it will be executed silently by the Package Installer.
+	</td></tr>
+<tr><td width="230"><tt>--run-post-install</tt></td><td>
+	Sometimes a post-install script should be run at the end of the installation wizard, and sometimes it should be run 
+	after configuration files have been saved to the server. Use the value 'config' to specify that the post-install script should run after configuration, and any other value to specify that it should run after file upload and any Loader installation.
+	</td></tr>
+<tr><td width="230"><tt>--stub-version</tt></td><td>
+	Use this option to customise the version number of the installer executable file.
+	</td></tr>
+<tr><td width="230"><tt>--stub-product</tt></td><td>
+	Use this option to customise the product name in the installer executable file's version info resource.
+	</td></tr>
+<tr><td width="230"><tt>--stub-copyright</tt></td><td>
+	Use this option to customise the copyright message in the installer executable file's version info resource.
+	</td></tr>
+<tr><td width="230"><tt>--stub-description</tt></td><td>
+	Use this option to customise the product description in the installer executable file's version info resource.
+	</td></tr>
+<tr><td width="230"><tt>--stub-comments</tt></td><td>
+	Use this option to customise the comments field in the installer executable file's version info resource.
+	</td></tr>
+<tr><td width="230"><tt>--stub-icon</tt></td><td>
+	Use this option to customise the application icon of the installer executable file's version info resource.
+	</td></tr>
+<tr><td width="230"><tt>--with</tt></td><td>
+	IPF has a modular architecture, and this option can be used to specify which installed plugins to enable. SSL support is currently implemented as a plugin, and is the only plugin available.
+	</td></tr>
+<tr><td width="230"><tt>--language-pack</tt></td><td>
+	Language packs can be included with the installer by using this option. End-users whose system locale to an included locale will see messages displayed in their language. See the 'locale' subfolder of the IPF installation folder for the available language packs. 
+	</td></tr>
+<tr><td width="230"><tt>--default-language</tt></td><td>
+	If the end-user's current system locale is not available as an included language pack, unlocalised (English) messages will be displayed by the installer. Specify this option to use a different language pack as the default.
+	</td></tr>
+<tr><td width="230"><tt>--commmon-documents</tt></td><td>
+	If this option is used then the common documents folder will be searched for unlocalised versions of install files (readme, license etc). Otherwise IPF will search relative to the current .pfs script.
+	</td></tr>
+<tr><td width="230"><tt>--localised-documents</tt></td><td>
+	This option sets the root of the localised documents tree. Subfolders are named according to language codes (e.g. en), or language and country codes (e.g. en_GB). Localised versions of install files are then added to the appropriate language subfolder.
+	</td></tr>
+<tr><td width="230"><tt>--active-help-url</tt></td><td>
+	This option sets the target URL for the <b>Help</b> button on IPF created installers.
+	</td></tr>
+</table></td></tr>
+<tr valign="bottom" height="10"><td style="padding:0px">
+<div align="center" class="copyright">
+Copyright 2002-2005 <a class="copyright" href="http://www.ioncube.com">ionCube Ltd.</a>  All rights reserved. 
+</div>
+</td></tr></table>
+</BODY>
+</HTML>

@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>ionCube Package Foundry</TITLE>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY>
+<table align="center" width="600" height="100%">
+<tr valign="top"><td>
+
+<div align="right">
+<img src="images/Logo1.png" border="0"><br>
+<a href="pfs_optional.html">Previous</a> |
+
+<a href="translating_installers.html">Next</a> | 
+<a href="index.html">Up</a> | 
+<a href="index.html">Table of Contents</a>
+</div>
+
+	<h4>7. Active Help API</h4>
+<p>
+The <b>Help</b> button on installers created with IPF provides web-based context sensitive help.
+By default the URL associcated to the Help button is 'http://help.ioncube.com/ipf/index.php', but 
+any web page can be used by setting the <a href="pfs_optional.html#active-help-url">active-help-url</a> option.
+</p>
+
+<p>
+Several GET paramaters are used to control the content displayed to the user. The possible parameters are listed below.
+</p>
+
+<h4>page</h4>
+
+<p>
+The <b>page</b> parameter is set according to the page on which the user clicks the Help button. Possible values for this
+parameter are:
+</p>
+
+<ul>
+<li>intro</li>
+<li>license</li>
+<li>introfile</li>
+<li>localremote</li>
+<li>loc</li>
+<li>ftp</li>
+<li>http</li>
+<li>review</li>
+<li>actions</li>
+<li>done</li>
+<li>configure</li>
+</ul>
+
+
+
+<h4>version</h4>
+
+<p>
+This parameter is set to the version of IPF used to create the installer, for example 3.0.0.
+</p>
+
+
+<h4>type</h4>
+
+<p>
+This parameter can take values 'local' or 'remote', according to whether the user is performing a local or remote install. 
+</p>
+
+<h4>locale</h4>
+
+<p>
+This parameter is the language and country code of the system locale on the user's machine, for example en_GB.
+</p>
+
+<h4>introfile</h4>
+
+<p>
+This parameter is 1 or 0 according to whether the installer has an intro file or not.
+</p>
+
+<h4>license</h4>
+
+<p>
+This parameter is 1 or 0 according to whether the installer has a license file or not.
+</p>
+
+
+<h4>ftp_host</h4>
+<p>
+If the user clicked Help on the HTTP settings page then this parameter will be set to the FTP host name which the
+user entered on the FTP settings page.
+</p>
+
+
+<h4>ftp_dir</h4>
+<p>
+If the user clicked Help on the HTTP settings page then this parameter will be set to the FTP install directory which the
+user entered on the FTP settings page.
+</p>
+
+</td></tr>
+<tr valign="bottom" height="10"><td style="padding:0px">
+<div align="center" class="copyright">
+Copyright 2002-2005 <a class="copyright" href="http://www.ioncube.com">ionCube Ltd.</a>  All rights reserved. 
+</div>
+</td></tr></table>
+</BODY>
+</HTML>

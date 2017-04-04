@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>ionCube Package Foundry</TITLE>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY>
+<table align="center" width="600" height="100%">
+<tr valign="top"><td>
+
+<div align="right">
+<img src="images/Logo1.png" border="0"><br>
+<a href="gui_install_files.html">Previous</a> |
+
+<a href="gui_permissions.html">Next</a> | 
+<a href="ipf_gui.html">Up</a> | 
+<a href="index.html">Table of Contents</a>
+</div>
+
+	<h4>5.3. Special Files</h4>
+<p>
+Advanced IPF settings are entered on the <b>Advanced</b> tab:</p>
+
+<div align="center">
+<img src = "images/ipf_special_files.png">
+</div>
+<br>
+
+<p>
+A <b>post-install script</b> can be triggered at the end of installation. This script could, for example, be a PHP script which would 
+modify some files in the package. Some tasks may not require user-insteraction, but some may require a response. In the latter case the 
+script will be launched in a browser, otherwise it will be accessed silently. The script can be any file in the package, and need not even be a script: it could be a plain .html file, or even an image! If a post-install script is used, the end-user will be prompted to enter the URL of the package on their web server.
+</p>
+
+<p>If a non-interactive post-install script outputs any text, then this text will be shown to the end-user in a dialog. This allows the display of any configuration errors that may occur.</p>
+
+<p>
+If the <b>Run post-install script after configuration step</b> box is checked then the post-install script will not be run at the end of installation. Instead the script will be executed each time the end-user clicks the <b>Apply</b> button on the Configurator, after the configurable files have been uploaded to the server.
+</p>
+
+<p>
+When using the <b>Configuration Tool</b>, it is desirable to be able to verify changes made to the configuration. The main page
+of the product specified on this tab is the page which is launched in the user's default browser when they click the <b>Launch</b> button. If a main page is used, the end-user will be prompted to enter the URL of the package on their web server.
+</p>
+
+<p>
+Those files added to the list on this tab can be configured by end-users using the IPF <b>Configuration Tool</b>. 
+Items on the list should be text files as they will be edited using the simple built-in text editor.
+</p></td></tr>
+<tr valign="bottom" height="10"><td style="padding:0px">
+<div align="center" class="copyright">
+Copyright 2002-2005 <a class="copyright" href="http://www.ioncube.com">ionCube Ltd.</a>  All rights reserved. 
+</div>
+</td></tr></table>
+</BODY>
+</HTML>

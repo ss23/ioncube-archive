@@ -1,0 +1,1 @@
+This is an example readme file for the ionCube Package Foundry sample projects.

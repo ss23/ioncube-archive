@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>ionCube Package Foundry</TITLE>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY>
+<table align="center" width="600" height="100%">
+<tr valign="top"><td>
+
+<div align="right">
+<img src="images/Logo1.png" border="0"><br>
+<a href="gui_special_files.html">Previous</a> |
+
+<a href="gui_images.html">Next</a> | 
+<a href="ipf_gui.html">Up</a> | 
+<a href="index.html">Table of Contents</a>
+</div>
+
+	<h4>5.4. Custom Permissions</h4>
+<p>
+Behaviour with respect to permissions can be set on the <b>Permissions</b> tab:
+</p>
+
+<div align="center">
+<img src="images/ipf_permissions.png">
+</div>
+<br>
+
+<p>
+When using Windows it can be difficult to set up a package which will have the desired 
+permissions when transferred to the target FTP server. The <B>Permissions</B> tab helps with this issue.
+</p>
+
+<p>
+Adding a file or folder to the list with a custom permission ensures that the item will receive the correct 
+permission on the FTP server, if the server supports permissions. To add an item, double-click on the grey final item in the list.
+</p>
+
+<p>Usually most items in a package should have the same permission. If the <b>'Use FTP server permissions'</b> radio button 
+is selected, then items not on the custom permissions list will receive whatever permission the FTP server uses as its default.
+Choosing this option is a good idea, as it results in less commands sent over the FTP connection.
+</p>
+
+<p>If a specific permission is required for most files then this can be set by selecting <b>'Use the following permissions'</b> and 
+entering the desired values. as noted above, this may increase transfer times since a permission will need to be set for every item in the package.
+</p>
+
+<p>Some FTP servers do not support permission setting. This is true in particular for Windows FTP servers, where UNIX style permissions do not make sense. A warning dialog is displayed by default if the target server does not support permission changes, but the final option on this tab allows the dialog to be disabled.
+</p>
+</td></tr>
+<tr valign="bottom" height="10"><td style="padding:0px">
+<div align="center" class="copyright">
+Copyright 2002-2005 <a class="copyright" href="http://www.ioncube.com">ionCube Ltd.</a>  All rights reserved. 
+</div>
+</td></tr></table>
+</BODY>
+</HTML>

@@ -1,0 +1,24 @@
+package-name "Sample"
+product-version 2.0
+
+package-dir example-webapp-1
+compression-type gzip
+
+license-file "license.txt"
+readme-file "readme.txt"
+intro-file "intro.txt"
+intro-file-external no
+upload-as-archive no
+has-encoded-files no
+all-encoded-files-binary no
+
+main-page "example1.php"
+
+post-install-php post-install.php	
+
+output-file example1_setup.exe
+
+configurable-file config.txt
+                        
+has-encoded-files 0
+default-package-folder-name ipf-example

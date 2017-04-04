@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>ionCube Package Foundry</TITLE>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY>
+<table align="center" width="600" height="100%">
+<tr valign="top"><td>
+
+<div align="right">
+<img src="images/Logo1.png" border="0"><br>
+<a href="active_help_api.html">Previous</a> |
+
+<a href="using_htaccess_files.html">Next</a> | 
+<a href="index.html">Up</a> | 
+<a href="index.html">Table of Contents</a>
+</div>
+
+	<h4>8. Translating Installers</h4>
+<p>
+The contents of the <b>Available Languages</b> list in the IPF GUI is generated dynamically by IPF at startup. The IPF installation folder (typically <code>C:\Program Files\IPF</code> contains a subfolder <code>locale</code>. Subfolders of the <code>locale</code> folder determine the items displayed in the IPF available languages list. 
+</p>
+
+<p>To add a new language to IPF it is necessary to add a folder to the <code>locale</code> subdirectory. The name of this directory must contain a two letter language code - <b>en</b> for English, for example. The list of language codes is set by the <a href="http://www.w3.org/WAI/ER/IG/ert/iso639.htm#2letter" target="_blank">ISO 639 standard</a> (it is usual to use lower case, however). The directory can also contain a 2 letter country code suffix. The list of 2 letter country codes is contained in the <a href="http://www.iso.org/iso/en/prods-services/iso3166ma/02iso-3166-code-lists/list-en1.html" target="_blank">ISO 3166-1-alpha-2</a> standard.
+As a full example, pt_BR would be the correct folder name for Brazilian Portuguese.
+</p>
+
+<p>Inside the language folder, a subfolder <code>LC_MESSAGES</code> must be created, and inside this subfolder the translated messages file <code>driver.mo</code> must be copied. See the existing language folders for an example.
+</p>
+
+<p>The untranslated messages for the installer are contained in the file <code>driver.pot</code> which may be found in the folder <code>locale_src</code> in the IPF installation folder. Various tools are available to convert a translated <code>driver.pot</code> into a compiled <code>driver.mo</code> file: 
+</p>
+
+<li>The <a href="http://www.gnu.org/software/gettext/manual/html_chapter/gettext.html#SEC_Top" target="_blank">GNU basic command-line tools</a> are xgettext, and msgfmt.</li>
+<li><a href="http://www.poedit.org/index.php" target="_blank">poEdit</a> is a free GUI editor for translating .pot files.</a></li></td></tr>
+<tr valign="bottom" height="10"><td style="padding:0px">
+<div align="center" class="copyright">
+Copyright 2002-2005 <a class="copyright" href="http://www.ioncube.com">ionCube Ltd.</a>  All rights reserved. 
+</div>
+</td></tr></table>
+</BODY>
+</HTML>

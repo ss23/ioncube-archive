@@ -1,0 +1,2 @@
+;Replace ? with the desired image width on the next line:
+image-width=?

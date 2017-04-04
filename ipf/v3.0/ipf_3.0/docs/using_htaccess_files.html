@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>ionCube Package Foundry</TITLE>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY>
+<table align="center" width="600" height="100%">
+<tr valign="top"><td>
+
+<div align="right">
+<img src="images/Logo1.png" border="0"><br>
+<a href="translating_installers.html">Previous</a> |
+
+<a href="index.html">Up</a> | 
+<a href="index.html">Table of Contents</a>
+</div>
+
+	<h4>9. Using htaccess Files</h4>
+<p>
+Sometimes a package may contain an .htaccess file in its top level folder. This may be used to limit web access
+to specific subfolders of the application. The use of such a file may cause problems during installation, since 
+IPF will create its own temporary folder which it will need to access via the web.
+</p>
+
+<p>
+The working directory used by IPF will have the name 'ipf-work-dir-X' where X will be replaced by a timestamp. This directory will be deleted at the end of the installation. If an .htaccess file is used it will be necessary to allow web access to folders with names of the form 'ipf-work-dir-X'. It may also be advisable to allow access to the 'ioncube' folder. In case Loaders cannot be installed, web access will be needed to ioncube/ioncube-loader-helper.php. This script helps users manually install Loaders.
+</p></td></tr>
+<tr valign="bottom" height="10"><td style="padding:0px">
+<div align="center" class="copyright">
+Copyright 2002-2005 <a class="copyright" href="http://www.ioncube.com">ionCube Ltd.</a>  All rights reserved. 
+</div>
+</td></tr></table>
+</BODY>
+</HTML>

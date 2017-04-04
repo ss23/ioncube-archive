@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>ionCube Package Foundry</TITLE>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY>
+<table align="center" width="600" height="100%">
+<tr valign="top"><td>
+
+<div align="right">
+<img src="images/Logo1.png" border="0"><br>
+<a href="gui_basic.html">Previous</a> |
+
+<a href="gui_special_files.html">Next</a> | 
+<a href="ipf_gui.html">Up</a> | 
+<a href="index.html">Table of Contents</a>
+</div>
+
+	<h4>5.2. Install Files</h4>
+<p>
+Files such as the readme, and end-user license agreement can be displayed to the user during the installation process
+within the wizard interface. We refer to these files as <b>install files</b>. Settings related to these files
+can be entered on the install files tab:</p>
+
+<div align="center">
+<img src="images/ipf_install_files.png">
+</div>
+<br>
+
+
+<p>
+Files referred to on this page are not usually located in the source package, as they are usually displayed during installation rather than being
+</p>
+
+<h4>Basic install file usage</h4>
+
+<p>
+
+Install files are displayed to the user at certain points during the installation process. All files are optional - if the files are not specified, then the corresponding installer wizard page will be omitted.
+</p>
+
+<p>The <b>License file</b> is displayed immediately after the start page.</p>
+<p>The <b>Intro File</b> is shown immediately after the license agreement. It is typically used to display  a welcome message, installation instructions, or other text.
+If the intro file is a text file it can be displayed internally in the installer wizard. Any file with a Windows file association (for example an html file) can be used if the <b>Launch intro file using Windows</b> option is checked. A URL may be specified instead of the path to a file.</p>
+
+<p>
+The <b>Readme File</b> is displayed at the end of the installation process.
+</p>
+
+
+<h4>Localised install files</h4>
+
+<p>
+Localised install files are supported from IPF version 2.0. The path to a folder containing localised documents should be entered in the <b>Localised Documents Root Folder</b> in order to use this feature. This folder will be searched during the installation for an appropriately localised version of the document, and if a suitable version isn't found, then the unlocalised version will be used.
+</p>
+
+<p>Put simply, the localised documents folder should contain localised versions of install files, and the common documents folder should contain default, unlocalised versions of these documents (used in case an appropriately localised version is not found).</b>
+
+<p>For example, suppose we enter <code>C:\local</code> as the localised documents folder. We create a subfolder <code>de</code>, and save a German <code>readme.txt</code> into the <code>de</code> folder. We also save an unlocalised version, English in this case, to <code>C:\docs\readme.txt</code>,  and enter <code>C:\docs</code> as the <b>Common Documents Folder</b>. We should enter <code>readme.txt</code> into the <b>Readme File</b> edit box.</p>
+
+<p>In this example, when the installer is run by an end-user whose system is set to the German locale, the readme.txt will be selected from the <code>de</code> folder and displayed to the user. If the user's system was set to Spanish, and no readme.txt was found localised to Spanish, then the file copied from C:\docs\readme.txt would be displayed.</p>
+
+<p>It is not necessary to enter a localised documents folder - in that case the files will always be taken from the common documents folder.</p>
+
+<p>If a common documents folder is not used, then relative paths will be resolved with respect to the location of the .pfs script.</p>
+
+</td></tr>
+<tr valign="bottom" height="10"><td style="padding:0px">
+<div align="center" class="copyright">
+Copyright 2002-2005 <a class="copyright" href="http://www.ioncube.com">ionCube Ltd.</a>  All rights reserved. 
+</div>
+</td></tr></table>
+</BODY>
+</HTML>

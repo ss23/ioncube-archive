@@ -1,0 +1,472 @@
+body, input.inline
+{
+	font: 8pt tahoma;
+	margin:0px;
+	padding:0px;
+} 
+
+
+.traffic_lights
+{
+	border:0px solid gray;
+	background-color:black;
+	height:20px;
+}
+
+.traffic_lights tr td
+{
+	width:33%;
+	padding-left:10px;
+	font-weight:bold;
+	color:white;
+}
+
+.traffic_lights tr td.green
+{
+	background-color:#0c0;
+
+}
+
+.traffic_lights tr td.orange
+{
+	background-color:orange;
+}
+
+.traffic_lights tr td.red
+{
+	background-color:red;
+}
+
+
+.traffic_lights tr td.gray
+{
+	background-color:#ddd;
+	color:#ddd;
+}
+
+
+
+img
+{
+	border-width: 0px;
+	}
+
+div.ds_outer
+{
+padding:5px;
+background-color:white;
+background-image:url(images/bannergradient.gif);
+background-repeat:repeat-y;
+
+}
+div.domain_selector, form.domain_selector
+{
+
+	padding:0px;
+	margin:0px;	
+}
+div.content
+{
+	/* height:720px; */
+	
+}
+
+div.domain_panel
+{
+	background-image:url(images/diag.gif);
+	border-bottom:1px solid #ccc;
+	}
+
+table.footer 
+{
+	background-color:#eee;
+	margin:0px;
+	border-bottom: 1px solid #aaa;
+	border-top:1px solid #ccc;
+	
+	}
+
+table.footer tr td
+{
+	color:#888;	
+}
+
+span.form-error
+{
+
+	color:red;
+	font-weight:bold;
+	margin-left:10px;
+}
+h3
+{
+	color:#444;
+	}
+
+h2, span.h2
+{
+	
+	color:#666;
+	font: 13pt tahoma;
+	font-weight:normal;
+	}
+
+h2 a:link, span.h2 a:link, h2 a:visited, span.h2 a:visited
+{
+	color:#666;
+	text-decoration:underline;
+}
+
+h2 a:hover, span.h2 a:hover
+{
+	color:#111;
+	text-decoration:underline;
+}
+
+
+.disabled
+{
+	color:red;
+}
+
+.enabled
+{
+	color:green;
+}
+
+
+th
+{
+	font: bold 8pt tahoma;
+
+}
+
+
+hr
+{
+	border-color:#ccc;
+	color:#ccc;
+	border-top-width:0px;
+	height:1px;
+	margin:0px;
+	padding:0px;
+}
+
+form.table_form
+{
+	margin:0px;
+	padding:0px;
+}
+
+table.status
+{
+	background-color:#ccc;
+}
+
+table.status td, table.status th
+{
+	padding:1px;
+	margin:1px;
+	background-color:#eeeeff;
+	
+}
+	
+
+.text_login
+{
+	width:100%;
+}
+
+span.gray
+{
+	color:#777;
+}
+
+
+.bottom
+{
+	font-weight:bold;
+	color:444;
+	padding:5px;
+	width:100%;
+	background-color:#eee;
+	border-bottom: 1px solid #ccc;
+}
+
+.bottom-span
+{
+	padding:5px;
+	margin:0px;
+	color:#888;
+	margin:0px;
+	background-color:#f8f8f8;
+	border-right: 1px solid #ccc;
+}
+
+.menu
+{	
+	background-color: #EEEEFF;
+	margin-top:0px;
+	margin-bottom:1px;
+	padding:20px;
+	border-bottom:1px solid #ddd
+
+}
+
+.warning
+{
+	color:#800000;
+	font-weight:bold;
+} 
+
+
+
+a:link,a:visited
+{
+	color:blue;
+}
+
+a:hover
+{
+	color:red;
+}
+
+span.disabled_arrow
+{
+color:#888;
+font-size:10pt;
+
+}
+
+
+a.page_number:link, a.page_number:visited
+{
+	color:#888;
+	text-decoration:none;
+	font-size:10pt;
+}
+
+a.page_number:hover
+{
+	text-decoration:underline;
+}
+
+
+a.page_number_sel:link, a.page_number_sel:visited
+{
+	color:black;
+	text-decoration:none;
+	font-size:10pt;
+}
+
+a.page_number_sel:hover
+{
+	text-decoration:underline;
+}
+
+
+
+th a:link,th a:visited
+{
+	color:black;
+	text-decoration:none;
+}
+
+th a:hover
+{
+	text-decoration:underline;
+}
+
+td
+{
+font: 8pt tahoma;
+
+}
+
+
+div.maintenance
+{
+	background-color:#efefff;
+	border:1px solid #ddd;
+	padding:5px;
+	padding
+}
+
+
+.domain_config
+{
+	background-color:#efefff;
+	border:1px solid #ddd;
+	padding:5px;
+}
+
+
+.info
+{
+	color:#999;
+}
+
+.form
+{
+	width:100px;
+}
+
+
+.form-number
+{
+	width:100px;
+	text-align:left;
+}
+
+.form-dir
+{
+	width:200px;
+	text-align:left;
+}
+
+.form-full-path
+{
+	width:100%	;
+	text-align:left;
+}
+
+textarea.ignore
+{
+	width:100%;
+	height:200px;
+	font: 8pt tahoma;
+}
+
+#about
+{
+	background-color:red;
+	width:10px;
+}
+
+table.ips
+{
+	border:2px solid #DDD;
+	cursor:pointer;
+	background-color:white;
+}
+
+tr.row_gap
+{
+	height:2px;
+	margin:0px;
+	
+}
+
+tr.row_gap td
+{
+	padding:0px;
+	margin:0px;
+	background-color:#DDD;
+	
+}
+
+table.ips thead
+{
+	cursor:default;
+}
+
+table.ips tr
+{
+	background-color:#eeeeff;
+}
+
+table.ips tr td, table.ips th
+{
+	padding-left:5px;
+	padding-right:5px;
+	white-space:nowrap;
+}
+
+table.ips_table_footer tr td
+{
+	width:33%;
+}
+
+table.ips tbody tr:hover
+{
+	background-color:#ccf;
+	color:black;
+	text-decoration:underline;
+}
+
+#summary
+{
+	cursor:default;
+}
+#summary tbody tr:hover
+{
+	
+	background-color:#eeeeff;
+	text-decoration:none;
+}
+
+table.ips tbody tr.selected
+{
+	background-color:#ccf;
+	color:#555;
+	font-weight:bold;
+}
+table.ips tbody tr.selected:hover
+{
+	background-color:#ccf;
+}
+
+
+
+/* TAB STUFF */
+
+
+
+div.tab_total
+{
+
+	background-color:white;
+	background-image:url(images/tabgradient.gif);
+	background-repeat:repeat-y;
+}
+
+table.tab
+{
+	border:0px solid red;
+}
+
+table.tab tr td
+{
+	padding:5px;
+
+}
+
+div.tab
+{
+	border:1px solid #ddd;
+	border-top-width:0px;
+	padding:5px;
+	
+}
+
+td.sel_tab
+{
+	border:1px solid #ddd;
+	border-bottom-width:0px;
+	width:80px;	
+}
+
+td.spare
+{
+	background-color:#efefff;
+	border:0px solid #ddd;
+	border-bottom-width:1px;
+}
+
+td.unsel_tab
+{
+	background-color:#efefff;
+	border:0px solid #ddd;
+	border-bottom-width:1px;
+	width:80px;
+}

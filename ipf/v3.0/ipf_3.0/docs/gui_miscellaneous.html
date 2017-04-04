@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>ionCube Package Foundry</TITLE>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY>
+<table align="center" width="600" height="100%">
+<tr valign="top"><td>
+
+<div align="right">
+<img src="images/Logo1.png" border="0"><br>
+<a href="gui_stub.html">Previous</a> |
+
+<a href="gui_languages.html">Next</a> | 
+<a href="ipf_gui.html">Up</a> | 
+<a href="index.html">Table of Contents</a>
+</div>
+
+	<h4>5.7. Miscellaneous</h4>
+<p>
+The IPF <b>Miscellaneous</b> tab is shown below:</p>
+
+<div align="center">
+<img src = "images/ipf_miscellaneous.png">
+</div>
+<br>
+
+<p>
+Commonly a package will be transferred to the FTP server one file at a time. On the other hand, if a server has suitable features, the package may be uploaded as an archive and unpacked on the server. Although less data is transferred using this latter method, more FTP commands may be necessary. With the latency inherent in FTP, this may increase the overall upload time. Which method is perferable depends on the structure of the package. As a guide choose the <b>upload as archive</b> option if the package consists of a small number of large files that compress well, otherwise choose <b>upload as individual files</b>. Testing both options is a good idea. 
+</p>
+
+<p>
+When certain errors occur during an installation, for example if ionCube Loaders are required but not available for the target server, a log file may be generated and sent to ionCube. A <b>contact email</b> address can be provided which we can use to pass on the log, or discuss issues, if needed.
+</p>
+
+
+<p>Installers created with IPF feature a context-sensitive <b>active help</b> system. A <b>Help</b> button on the installer Wizard launches a web browser and navigates to a web site, passing information related to the current state of the installer. By default the script linked with the active help system is http://help.ioncube.com/ipf/index.php, but a custom site can be used. This enables the active help system to be branded or customised for a particular product or company. Content can be copied from the default active help site. Please read the <a href="active_help_api.html">active help</a> page in this documentation for details on how to customise the active help system for your product.
+</p>
+
+<p>
+SSL support can be added to installers built with IPF. This enables sites using HTTPS to be accessed. On the other hand, adding SSL support can increase filesize overhead significantly, which is why the option is provided rather than enabling SSL support by default. If bandwidth usage is a particularly important concern then it might be desirable to make two versions of a given product avilable for download: one version with SSL support and one without.
+</p>
+ </td></tr>
+<tr valign="bottom" height="10"><td style="padding:0px">
+<div align="center" class="copyright">
+Copyright 2002-2005 <a class="copyright" href="http://www.ioncube.com">ionCube Ltd.</a>  All rights reserved. 
+</div>
+</td></tr></table>
+</BODY>
+</HTML>

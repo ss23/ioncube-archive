@@ -1,0 +1,440 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>ionCube Package Foundry</TITLE>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY>
+<table align="center" width="600" height="100%">
+<tr valign="top"><td>
+
+<div align="right">
+<img src="images/Logo1.png" border="0"><br>
+<a href="pfs_mandatory.html">Previous</a> |
+
+<a href="active_help_api.html">Next</a> | 
+<a href="ipf_script_files.html">Up</a> | 
+<a href="index.html">Table of Contents</a>
+</div>
+
+	<h4>6.2. Optional Items</h4>
+<div style="padding-left:150px;">
+
+<b>1. <a href="#product-version">product-version</a></b><br>
+<b>2. <a href="#compression-level">compression-level</a></b><br>
+<b>3. <a href="#upload-as-archive">upload-as-archive</a></b><br>
+<b>4. <a href="#license-file">license-file</a></b><br>
+<b>5. <a href="#readme-file">readme-file</a></b><br>
+<b>6. <a href="#intro-file">intro-file</a></b><br>
+<b>7. <a href="#intro-file-external">intro-file-external</a></b><br>
+<b>8. <a href="#configurable-file">configurable-file</a></b><br>
+<b>9. <a href="#chmod-package">chmod-package</a></b><br>
+<b>10. <a href="#use-server-permissions">use-server-permissions</a></b><br>
+<b>11. <a href="#default-file-mode">default-file-mode</a></b><br>
+<b>12. <a href="#default-folder-mode">default-folder-mode</a></b><br>
+<b>13. <a href="#disable-permissions-warning">disable-permissions-warning</a></b><br>
+<b>14. <a href="#disable-local-installs">disable-local-installs</a></b><br>
+<b>15. <a href="#allow-pfn-edit">allow-pfn-edit</a></b><br>
+<b>16. <a href="#hide-product-info">hide-product-info</a></b><br>
+<b>17. <a href="#main-page">main-page</a></b><br>
+<b>18. <a href="#image-side-panel">image-side-panel</a></b><br>
+<b>19. <a href="#image-motif">image-motif</a></b><br>
+<b>20. <a href="#auto-install-loaders">auto-install-loaders</a></b><br>
+<b>21. <a href="#all-encoded-files-binary">all-encoded-files-binary</a></b><br>
+<b>22. <a href="#post-install-php">post-install-php</a></b><br>
+<b>23. <a href="#post-install-php-interactive">post-install-php-interactive</a></b><br>
+<b>24. <a href="#run-post-install">run-post-install</a></b><br>
+<b>25. <a href="#stub-version">stub-version</a></b><br>
+<b>26. <a href="#stub-product">stub-product</a></b><br>
+<b>27. <a href="#stub-copyright">stub-copyright</a></b><br>
+<b>28. <a href="#stub-description">stub-description</a></b><br>
+<b>29. <a href="#stub-comments">stub-comments</a></b><br>
+<b>30. <a href="#stub-icon">stub-icon</a></b><br>
+<b>31. <a href="#with">with</a></b><br>
+<b>32. <a href="#add-language-pack">add-language-pack</a></b><br>
+<b>33. <a href="#default-locale">default-locale</a></b><br>
+<b>34. <a href="#commmon-documents">commmon-documents</a></b><br>
+<b>35. <a href="#localised-documents">localised-documents</a></b><br>
+<b>36. <a href="#active-help-url">active-help-url</a></b><br>
+</div>
+
+<br><br>
+
+<div align="center">
+
+<a name="product-version">
+<table class="item" >
+<tr><td>Item:</td><td><tt>product-version</tt></td></tr>
+<tr><td>Usage:</td><td><tt>product-version "1.0 RC8"</tt></td></tr>
+<tr><td colspan="2">
+	The product version may be specified with this item. The default value is '1.0'.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="compression-level">
+<table class="item" >
+<tr><td>Item:</td><td><tt>compression-level</tt></td></tr>
+<tr><td>Usage:</td><td><tt>compression-level 7</tt></td></tr>
+<tr><td colspan="2">
+	When using 'gzip' compression to compress a package folder, one can specify the compression level to use, between 0 and 9 inclusive. Using level 9 gives a better ratio, but is slower than using level 1. Level 6 is a reasonable value. Level 0 specifies that no compression should be used.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="upload-as-archive">
+<table class="item" >
+<tr><td>Item:</td><td><tt>upload-as-archive</tt></td></tr>
+<tr><td>Usage:</td><td><tt>upload-as-archive 0</tt></td></tr>
+<tr><td colspan="2">
+	If a server has suitable features, the package may be uploaded as a <tt>tar.gz</tt> archive and 
+unpacked on the server. Although less data is transferred, more FTP commands may be necessary. With the latency inherent in FTP, this may increase the overall upload time. Which method is perferable depends on the structure of the package. As a guide this option should be set to 1 if the package consists of a small number of large files that compress well, but testing both options is a good idea. The default value for this option is 0.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="license-file">
+<table class="item" >
+<tr><td>Item:</td><td><tt>license-file</tt></td></tr>
+<tr><td>Usage:</td><td><tt>license-file license.txt</tt></td></tr>
+<tr><td colspan="2">
+	If this item is used the specified file will be displayed during the installation process
+	</td></tr>
+</table>
+<br><br>
+
+<a name="readme-file">
+<table class="item" >
+<tr><td>Item:</td><td><tt>readme-file</tt></td></tr>
+<tr><td>Usage:</td><td><tt>readme-file readme.txt</tt></td></tr>
+<tr><td colspan="2">
+	If this item is used the use will have the option of displaying the readme file at the end of the installation process.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="intro-file">
+<table class="item" >
+<tr><td>Item:</td><td><tt>intro-file</tt></td></tr>
+<tr><td>Usage:</td><td><tt>intro-file intro.html</tt></td></tr>
+<tr><td colspan="2">
+	An introduction can be shown after the license agreement (or start page, if the license in not present). This introduction may contain installation instructions or other information. Either the path of a file can specified, or a URL.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="intro-file-external">
+<table class="item" >
+<tr><td>Item:</td><td><tt>intro-file-external</tt></td></tr>
+<tr><td>Usage:</td><td><tt>intro-file-external 1</tt></td></tr>
+<tr><td colspan="2">
+	If this option is set, the intro file will be launched externally using the Windows file association. For example, an html file
+will be launched in the default web browser. If this option is not set then the intro file will be displayed in the installer itself.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="configurable-file">
+<table class="item" >
+<tr><td>Item:</td><td><tt>configurable-file</tt></td></tr>
+<tr><td>Usage:</td><td><tt>configurable-file config.txt</tt></td></tr>
+<tr><td colspan="2">
+	After installation of a product it is often necessary to edit text files in order to configure the application. Installers created with the Package Foundry can automate this task by downloading, editing and uploading configuration files. You can specify (possibly multiple) such files using the <tt>configurable-file</tt> item.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="chmod-package">
+<table class="item" >
+<tr><td>Item:</td><td><tt>chmod-package</tt></td></tr>
+<tr><td>Usage:</td><td><tt>chmod-package o-w file.php</tt></td></tr>
+<tr><td colspan="2">
+	If a folder is to be used as the package source, and the compression type is set to 'gzip', permissions can be specified for files or subfolders in the package. These permissions override the permissions of the source file or folder and are used when installing the package either locally or via FTP. This is especially useful on Windows as it enables one to create a package with UNIX-style permissions. Permissions can be specified either as a list as in 'g+r, o-w', or in octal as in '660'.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="use-server-permissions">
+<table class="item" >
+<tr><td>Item:</td><td><tt>use-server-permissions</tt></td></tr>
+<tr><td>Usage:</td><td><tt>use-server-permissions 1</tt></td></tr>
+<tr><td colspan="2">
+	If the package is a folder rather than an archive this option specifies that file and folder permissions should not be edited once the item is uploaded to the target FTP server. If this option is set to 0 then permissions will be modified according to the <tt>default-file-mode</tt> and 
+	<tt>default-folder-mode</tt> options as described below. The default value for this option is 1.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="default-file-mode">
+<table class="item" >
+<tr><td>Item:</td><td><tt>default-file-mode</tt></td></tr>
+<tr><td>Usage:</td><td><tt>default-file-mode 606</tt></td></tr>
+<tr><td colspan="2">
+	When compressing a package archive with gzip compression this setting specifies the default permission mode to use for those files not specified with <tt>chmod-package</tt>. This option only applies to the Windows version of IPF, as on Linux permissions can be easily set for the package folder using the shell. The default value is 644.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="default-folder-mode">
+<table class="item" >
+<tr><td>Item:</td><td><tt>default-folder-mode</tt></td></tr>
+<tr><td>Usage:</td><td><tt>default-folder-mode 755</tt></td></tr>
+<tr><td colspan="2">
+	When compressing a package archive with gzip compression this setting specifies the default permission mode to use for those folders not specified with <tt>chmod-package</tt>. This option only applies to the Windows version of IPF, as on Linux permissions can be easily set for the package folder using the shell. The default value is 755.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="disable-permissions-warning">
+<table class="item" >
+<tr><td>Item:</td><td><tt>disable-permissions-warning</tt></td></tr>
+<tr><td>Usage:</td><td><tt>disable-permissions-warning 0</tt></td></tr>
+<tr><td colspan="2">
+	The setting of permissions will only work if the <tt>chmod</tt> command is supported on the target FTP server. If  <tt>disable-permission-warning</tt> is not set, then  a warning will be displayed if permissions cannot be set. The files and permissions specified with <tt>chmod-package</tt> will be listed. The warning is only displayed if at least one item is specified with <tt>chmod-package</tt>.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="disable-local-installs">
+<table class="item" >
+<tr><td>Item:</td><td><tt>disable-local-installs</tt></td></tr>
+<tr><td>Usage:</td><td><tt>disable-local-installs 1</tt></td></tr>
+<tr><td colspan="2">
+	If a product will only be installed to remote servers, and never to an end-user's local machine, then this option
+	can be used to remove the 'Installation Type' wizard step. This option would be useful, for example, if the creator of the package was intending to use the package to install to a handful of their own remote servers. If a product is for general release then usually this option should not be used.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="allow-pfn-edit">
+<table class="item" >
+<tr><td>Item:</td><td><tt>allow-pfn-edit</tt></td></tr>
+<tr><td>Usage:</td><td><tt>allow-pfn-edit 0</tt></td></tr>
+<tr><td colspan="2">
+	When this option is set to 1 the end-user will be able to edit the package folder name.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="hide-product-info">
+<table class="item" >
+<tr><td>Item:</td><td><tt>hide-product-info</tt></td></tr>
+<tr><td>Usage:</td><td><tt>hide-product-info 1</tt></td></tr>
+<tr><td colspan="2">
+	When this option is set to 1 the product name and version will not be displayed over the side panel image.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="main-page">
+<table class="item" >
+<tr><td>Item:</td><td><tt>main-page</tt></td></tr>
+<tr><td>Usage:</td><td><tt>main-page index.php</tt></td></tr>
+<tr><td colspan="2">
+	This item can be set to the main page of the package. The Configuration Tool will then launch this page
+in the user's default browser when they click <b>Launch</b>.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="image-side-panel">
+<table class="item" >
+<tr><td>Item:</td><td><tt>image-side-panel</tt></td></tr>
+<tr><td>Usage:</td><td><tt>image-side-panel my-panel.png</tt></td></tr>
+<tr><td colspan="2">
+	This item enables customisation of the side panel image on the first page and last pages of the package installer. The image must have file extension .png, .jpeg, .jpg, .bmp, or .gif, and be a valid image of the corresponding image format.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="image-motif">
+<table class="item" >
+<tr><td>Item:</td><td><tt>image-motif</tt></td></tr>
+<tr><td>Usage:</td><td><tt>image-motif motif.png</tt></td></tr>
+<tr><td colspan="2">
+	This item enables customizations of the image appearing on the top right of most pages in the package installer wizard. As with the side panel image, this image must be in Portable Network Graphics format.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="auto-install-loaders">
+<table class="item" >
+<tr><td>Item:</td><td><tt>auto-install-loaders</tt></td></tr>
+<tr><td>Usage:</td><td><tt>auto-install-loaders 1</tt></td></tr>
+<tr><td colspan="2">
+	By default, Loaders will be installed automatically if they are not already installed on the target server. Use this option to control 
+	whether to enable the automatic installation of Loaders.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="all-encoded-files-binary">
+<table class="item" >
+<tr><td>Item:</td><td><tt>all-encoded-files-binary</tt></td></tr>
+<tr><td>Usage:</td><td><tt>all-encoded-files-binary 0</tt></td></tr>
+<tr><td colspan="2">
+	Use this option to specify whether all files in the application which are encoded with the ionCube Encoder have been encoded in binary mode.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="post-install-php">
+<table class="item" >
+<tr><td>Item:</td><td><tt>post-install-php</tt></td></tr>
+<tr><td>Usage:</td><td><tt>post-install-php my-app/readme.php</tt></td></tr>
+<tr><td colspan="2">
+	Set this item to the URL of a page that should be launched in the user's default web browser after installation is complete. The URL is relative to the folder the user uploads the application into.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="post-install-php-interactive">
+<table class="item" >
+<tr><td>Item:</td><td><tt>post-install-php-interactive</tt></td></tr>
+<tr><td>Usage:</td><td><tt>post-install-php-interactive 1</tt></td></tr>
+<tr><td colspan="2">
+	This item specifies whether the post-install script requires user-interaction. If so, then the page will be launched in a browser, otherwise it will be executed silently by the Package Installer.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="run-post-install">
+<table class="item" >
+<tr><td>Item:</td><td><tt>run-post-install</tt></td></tr>
+<tr><td>Usage:</td><td><tt>run-post-install config</tt></td></tr>
+<tr><td colspan="2">
+	Sometimes a post-install script should be run at the end of the installation wizard, and sometimes it should be run 
+	after configuration files have been saved to the server. Use the value 'config' to specify that the post-install script should run after configuration, and any other value to specify that it should run after file upload and any Loader installation.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="stub-version">
+<table class="item" >
+<tr><td>Item:</td><td><tt>stub-version</tt></td></tr>
+<tr><td>Usage:</td><td><tt>stub-version 1.2.0.1</tt></td></tr>
+<tr><td colspan="2">
+	Use this option to customise the version number of the installer executable file.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="stub-product">
+<table class="item" >
+<tr><td>Item:</td><td><tt>stub-product</tt></td></tr>
+<tr><td>Usage:</td><td><tt>stub-product "My Product"</tt></td></tr>
+<tr><td colspan="2">
+	Use this option to customise the product name in the installer executable file's version info resource.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="stub-copyright">
+<table class="item" >
+<tr><td>Item:</td><td><tt>stub-copyright</tt></td></tr>
+<tr><td>Usage:</td><td><tt>stub-copyright "Copyright ionCube 2005"</tt></td></tr>
+<tr><td colspan="2">
+	Use this option to customise the copyright message in the installer executable file's version info resource.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="stub-description">
+<table class="item" >
+<tr><td>Item:</td><td><tt>stub-description</tt></td></tr>
+<tr><td>Usage:</td><td><tt>stub-description "IPF installer product"</tt></td></tr>
+<tr><td colspan="2">
+	Use this option to customise the product description in the installer executable file's version info resource.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="stub-comments">
+<table class="item" >
+<tr><td>Item:</td><td><tt>stub-comments</tt></td></tr>
+<tr><td>Usage:</td><td><tt>stub-comments "Beta build"</tt></td></tr>
+<tr><td colspan="2">
+	Use this option to customise the comments field in the installer executable file's version info resource.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="stub-icon">
+<table class="item" >
+<tr><td>Item:</td><td><tt>stub-icon</tt></td></tr>
+<tr><td>Usage:</td><td><tt>stub-icon C:\my_icon.ico</tt></td></tr>
+<tr><td colspan="2">
+	Use this option to customise the application icon of the installer executable file's version info resource.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="with">
+<table class="item" >
+<tr><td>Item:</td><td><tt>with</tt></td></tr>
+<tr><td>Usage:</td><td><tt>with SSL</tt></td></tr>
+<tr><td colspan="2">
+	IPF has a modular architecture, and this option can be used to specify which installed plugins to enable. SSL support is currently implemented as a plugin, and is the only plugin available.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="add-language-pack">
+<table class="item" >
+<tr><td>Item:</td><td><tt>add-language-pack</tt></td></tr>
+<tr><td>Usage:</td><td><tt>add-language-pack de</tt></td></tr>
+<tr><td colspan="2">
+	Language packs can be included with the installer by using this option. End-users whose system locale to an included locale will see messages displayed in their language. See the 'locale' subfolder of the IPF installation folder for the available language packs. 
+	</td></tr>
+</table>
+<br><br>
+
+<a name="default-locale">
+<table class="item" >
+<tr><td>Item:</td><td><tt>default-locale</tt></td></tr>
+<tr><td>Usage:</td><td><tt>default-locale de</tt></td></tr>
+<tr><td colspan="2">
+	If the end-user's current system locale is not available as an included language pack, unlocalised (English) messages will be displayed by the installer. Specify this option to use a different language pack as the default.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="commmon-documents">
+<table class="item" >
+<tr><td>Item:</td><td><tt>commmon-documents</tt></td></tr>
+<tr><td>Usage:</td><td><tt>commmon-documents C:\docs</tt></td></tr>
+<tr><td colspan="2">
+	If this option is used then the common documents folder will be searched for unlocalised versions of install files (readme, license etc). Otherwise IPF will search relative to the current .pfs script.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="localised-documents">
+<table class="item" >
+<tr><td>Item:</td><td><tt>localised-documents</tt></td></tr>
+<tr><td>Usage:</td><td><tt>localised-documents C:\locale</tt></td></tr>
+<tr><td colspan="2">
+	This option sets the root of the localised documents tree. Subfolders are named according to language codes (e.g. en), or language and country codes (e.g. en_GB). Localised versions of install files are then added to the appropriate language subfolder.
+	</td></tr>
+</table>
+<br><br>
+
+<a name="active-help-url">
+<table class="item" >
+<tr><td>Item:</td><td><tt>active-help-url</tt></td></tr>
+<tr><td>Usage:</td><td><tt>active-help-url http://www.mysite.com/install-help/index.php</tt></td></tr>
+<tr><td colspan="2">
+	This option sets the target URL for the <b>Help</b> button on IPF created installers.
+	</td></tr>
+</table>
+<br><br>
+
+</div></td></tr>
+<tr valign="bottom" height="10"><td style="padding:0px">
+<div align="center" class="copyright">
+Copyright 2002-2005 <a class="copyright" href="http://www.ioncube.com">ionCube Ltd.</a>  All rights reserved. 
+</div>
+</td></tr></table>
+</BODY>
+</HTML>

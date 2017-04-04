@@ -1,0 +1,76 @@
+body
+{
+	background-image: url(../images/gradient.png); 
+	background-repeat:repeat-x; 
+	background-attachment:fixed;
+	background-color:#2e6b86;
+}
+td
+{ 
+	font: 8pt Tahoma, Arial;
+	line-height:150%;
+}
+table
+{
+	background-color:white; 
+	border-width:1px; 
+	border-style:solid;
+	border-color:#D0D0D0; 
+	padding-left:20px;
+	padding-right:20px;
+}
+table.noborder
+{
+	background-color:white; 
+	border-width:0px; 
+	padding:50px;
+}
+table.toc
+{
+	background-color:white; 
+	border-width:0px; 
+	padding:50px;
+}
+table.toc td
+{
+	padding:0px;
+}
+table.toc td.sub
+{
+	padding-left:30px;
+}
+table.item{width:90%;background-color:#F0F0F0; border-width:1px; border-style:solid; border-color:#D0D0D0; padding:20px;}
+
+table.cli
+{
+	width:100%;
+	background-color:#F0F0F0; 
+	border-width:1px; 
+	border-style:solid; 
+	border-color:#D0D0D0; 
+	padding:1px;
+}
+
+table.cli tr td
+{
+	padding-left:15px;
+	padding-top:4px;
+	padding-bottom:4px;
+	line-height:15px;
+	background-color:#E0E0E0;
+}
+
+td{ padding:10px;}
+
+h3{ font:15pt Tahoma;font-weight:600; color:#2e6b86;}
+h4{ font:11pt Tahoma;font-weight:800; color:#2e6b86;}
+ul{list-style-type: circle;}
+hr{border-color:red;border-style:solid;}
+
+.copyright, .copyright a:link, .copyright a:visited
+{
+	color:#808080;
+}
+
+a:link{ color:#2e6b86;}
+a:visited{ color:#2e6b86;}

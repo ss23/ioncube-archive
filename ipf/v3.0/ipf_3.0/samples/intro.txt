@@ -1,0 +1,3 @@
+Welcome to the ionCube Package Foundry sample project. 
+Release notes could be added to this file as an alternative to the readme, 
+or installation instructions could be added.
